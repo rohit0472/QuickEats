@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickEats</title>
+    <link rel="icon" href="C:\Food Order Web\Food Order Website\WhatsApp_Image_2025-04-09_at_15.59.15_4755f301-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                
+                    <div class="logo" style="border-radius: 50%; height: 50px; width: 50px; overflow: hidden;">
+                        <img src="WhatsApp Image 2025-07-09 at 11.00.03_96d67811.jpg" alt="img">
+                    </div>
+                <ul class="nav-links">
+                    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <input type="text" id="balram" placeholder="Search menu items..." onkeyup="balram()">
+                <div class="cart-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div id="navBar">
+                    
+                </div>
+            </nav>
+        </div>
+        
+
+    </header>
+
+    <!-- Hero Section -->
+    <div id="jat">
+        <section class="hero" id="home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="hero-content">
+                <h1>Food for your soul, delivered with speed</h1>
+                <p>Order your favorite meals online or book a table for an amazing dining experience</p>
+                <a href="#menu" class="btn">Order Now</a>
+                <a href="#reservation" class="btn">Book a Table</a>
+            </div>
+        </section>
+    
+        <section class="hero" id="home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="hero-content">
+                <h1>Food Happiness Starts Here</h1>
+                <p>Encourages both online ordering and in-person dining</p>
+                <a href="#menu" class="btn">Order Now</a>
+                <a href="#reservation" class="btn">Book a Table</a>
+            </div>
+        </section>
+    
+        <section class="hero" id="home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="hero-content">
+                <h1>Delicious Food Delivered To You</h1>
+                <p>Order your favorite meals online or book a table for a delightful dining experience</p>
+                <a href="#menu" class="btn">Order Now</a>
+                <a href="#reservation" class="btn">Book a Table</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-title" id="choudhary">
+                <h2>Our Delicious Menu</h2>
+                <p>Choose from our wide variety of dishes</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="appetizer">Appetizers</button>
+                <button class="filter-btn" data-filter="main">Main Course</button>
+                <button class="filter-btn" data-filter="dessert">Desserts</button>
+                <button class="filter-btn" data-filter="drink">Drinks</button>
+            </div>
+            
+            <div class="menu-items" id="menuItems">
+                <!-- Menu items will be added dynamically -->
+            </div>
+            <p id="noResults">No items found.</p>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section" id="reservation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book a Table</h2>
+                <p>Reserve your table for a delightful dining experience</p>
+            </div>
+            
+            <div class="reservation-form">
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group" >
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8+ People</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Time Slot</label>
+                        <div class="time-slots" id="timeSlots">
+                            <!-- Time slots will be added dynamically -->
+                        </div>
+                        <input type="hidden" id="selectedTime" name="selectedTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" name="special-requests" rows="3" class="form-control"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Book Table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added dynamically -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-total" id="cartTotal">
+            Total: ₹0.00
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Payment Page (hidden by default) -->
+    <div class="payment-page" id="paymentPage" style="display: none;">
+        <div class="container">
+            <h1>Payment Integration</h1>
+            <p>Our payment system is currently in development. Please check back soon!</p>
+            <a href="#" class="btn" id="backToHome">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pet Pooja</h3>
+                    <p>Delivering delicious food since 2010. Our mission is to provide exceptional dining experiences.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Pratap Nagar, Jaipur</li>
+                        <li>Phone: (0141) 456-7890</li>
+                        <li>Email: info@petpooja.com</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook">f</i></a>
+                        <a href="#"><i class="fab fa-twitter">t</i></a>
+                        <a href="#"><i class="fab fa-instagram">i</i></a>
+                        <a href="#"><i class="fab fa-youtube">y</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pet Pooja. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
